@@ -41,7 +41,7 @@ class PreviewServer extends ConfigEmitter {
             this.setDefaultProject(project);
         }
         this.server.listen(this.config.parsed_opts.port, this.config.parsed_opts.host);
-        this.config.log('PreviewServer started, you can browse http://' + this.config.parsed_opts.host + ':' + this.config.parsed_opts.port);
+        this.config.log('PreviewServer started, you can browse http://' + '127.0.0.1' + ':' + this.config.parsed_opts.port);
         this.emitAndForward('listen');
     };
 
